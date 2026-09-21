@@ -1,0 +1,24 @@
+backend:
+  name: turbo-github
+  turbo_site_id: COLOCAR_AQUI_DEPOIS_O_SITE_ID_DO_TURBO
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    label_singular: "Post"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Imagem de destaque", name: "image", widget: "image", hint: "Formato padrão 1600x1200px (4:3), para manter a grade do blog uniforme."}
+      - label: "Categoria"
+        name: "categoria"
+        widget: "select"
+        options: ["Notícias", "Pesquisa Científica", "Ecossistema Feminino", "Histórias"]
+      - {label: "Descrição curta", name: "description", widget: "text", hint: "1 a 2 linhas, aparece no card do blog."}
+      - {label: "Conteúdo", name: "body", widget: "markdown", buttons: ["bold", "italic", "bulleted-list", "numbered-list", "link"]}

@@ -1,6 +1,6 @@
 backend:
   name: turbo-github
-  turbo_site_id: COLOCAR_AQUI_DEPOIS_O_SITE_ID_DO_TURBO
+  turbo_site_id: 4a8eefd9-49c8-4a41-9532-f03701a3c9bc
   branch: main
 
 media_folder: "uploads"
